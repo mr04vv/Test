@@ -1,9 +1,8 @@
 name: Base CI
 
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [echo_message]
 
 jobs:
   docker-build:
